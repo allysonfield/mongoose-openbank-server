@@ -17,12 +17,12 @@ const Middleware = require('../../middlewares/auth')
  *    get:
  *      tags:
  *      - Amount
- *      description: Total Amount
+ *      description: Amount
  *      parameters:
  *        - name: user_id
  *          in: path
  *          required: true
- *          description: ID
+ *          description: User ID
  *      responses:
  *        '200':
  *          description: A successful response

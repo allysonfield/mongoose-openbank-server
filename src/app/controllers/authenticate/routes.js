@@ -19,7 +19,7 @@ const routesAuthenticate = express.Router()
  *      parameters:
  *        - name: body
  *          in: body
- *          description: Value (amount value)
+ *          description: Email and Password
  *          required: true
  *          schema:
  *            type: object
