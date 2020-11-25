@@ -10,8 +10,11 @@ All routes in this api are protected with a token except the login and register 
 2. Open Terminal
 3. Go to your file project
 4. Run in terminal: ```npm install```
-5. And: ```yarn dev```
+5. And: ```yarn dev``` or ```npm dev```
 7. Navigate to Api Docs: [http://localhost:4200/api-docs](http://localhost:4200/api-docs)
+
+## TDD Test
+Run in terminal: ```npm test``` or ```yarn test```
 
 ## Table of Contents
 
@@ -26,8 +29,10 @@ All routes in this api are protected with a token except the login and register 
 * [Mongoose](https://mongoosejs.com/docs/api.html)
 * [Express](https://expressjs.com/pt-br/api.html)
 * [Supertest](https://www.npmjs.com/package/supertest)
+* [Jest](https://jestjs.io/docs/en/getting-started)
 * [Swagger](https://swagger.io/docs/)
 * [MongoDB](https://docs.mongodb.com/)
+
 
 ## Good Habits
 

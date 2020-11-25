@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">71.79% </span>
+                <span class="strong">74.36% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>28/39</span>
+                <span class='fraction'>29/39</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">71.79% </span>
+                <span class="strong">74.36% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>28/39</span>
+                <span class='fraction'>29/39</span>
             </div>
         
             
@@ -95,7 +95,8 @@
 <a name='L36'></a><a href='#L36'>36</a>
 <a name='L37'></a><a href='#L37'>37</a>
 <a name='L38'></a><a href='#L38'>38</a>
-<a name='L39'></a><a href='#L39'>39</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -118,33 +119,34 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
-const md5 = require('md5')
-const User = require("../../models/user");
-const Amount = require('../../models/amount');
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const md5 = require('md5')
+const User = require('../../models/user')
+const Amount = require('../../models/amount')
 const SafeBox = require('../../models/safeBox')
+&nbsp;
 class UserController {
   async store(req, res) {
-    const spread = req.body;
+    const spread = req.body
     const data = await User.create({
       ...spread,
-      password: md5(spread.password)
-    });
+      password: md5(spread.password),
+    })
     const amount = await Amount.create({
       user_id: data._id,
       value: 0,
@@ -154,31 +156,32 @@ class UserController {
       user_id: data._id,
       value: 0,
     })
-<span class="branch-0 cbranch-no" title="branch not covered" >    return res.json({data, amount, safeAmount});</span>
-<span class="cstat-no" title="statement not covered" >   </span>
+<span class="branch-0 cbranch-no" title="branch not covered" >    return res.json({ data, amount, safeAmount })</span>
 <span class="cstat-no" title="statement not covered" >  }</span>
+&nbsp;
 <span class="fstat-no" title="function not covered" >  async index(req, res) {</span>
-<span class="cstat-no" title="statement not covered" >    const data = await User.find();</span>
+<span class="cstat-no" title="statement not covered" >    const data = await User.find()</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    return res.json(data);</span>
+<span class="cstat-no" title="statement not covered" >    return res.json(data)</span>
 <span class="cstat-no" title="statement not covered" >  }</span>
 &nbsp;
 <span class="fstat-no" title="function not covered" >  async destroy(req, res) {</span>
-<span class="cstat-no" title="statement not covered" >    const _id = req.params.id;</span>
-<span class="cstat-no" title="statement not covered" >    await User.findByIdAndDelete({_id});</span>
+<span class="cstat-no" title="statement not covered" >    const _id = req.params.id</span>
+<span class="cstat-no" title="statement not covered" >    await User.findByIdAndDelete({ _id })</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    return res.json('Deleted user');</span>
+<span class="cstat-no" title="statement not covered" >    return res.json('Deleted user')</span>
 <span class="cstat-no" title="statement not covered" >  }</span>
 }
 &nbsp;
-module.exports = new UserController();</pre></td></tr></table></pre>
+module.exports = new UserController()
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sun Nov 22 2020 22:19:03 GMT-0300 (GMT-03:00)
+                at Tue Nov 24 2020 23:07:37 GMT-0300 (GMT-03:00)
             </div>
         </div>
         <script src="../../prettify.js"></script>
