@@ -1,8 +1,8 @@
-# [API - DOCS](http://localhost:3002/api-docs?ref=bda-readme) 
+# API - DOCS
 
 
 
-All routes in this api are protected with a token except the login and register routes. To obtain the token requires logging in
+All routes in this api are protected with a token except the login and register routes. To obtain the token requires logging in. [Api-Docs](http://localhost:3002/api-docs)
 
 ## Table of Contents
 
